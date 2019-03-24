@@ -1,0 +1,12 @@
+<h1> Rock Paper Scissors </h1>
+<h2>Hi, select 2 players using the drop down boxes below </h2>
+<br>
+<form>
+  <select name='player_1_select'>
+    <%= @user_mgmt.print_user_drop_down_html %>
+  </select>
+  <select name='player_2_select'>
+    <%= @user_mgmt.print_user_drop_down_html %>
+  </select>
+  <input type='submit' value='Submit'></input>
+</form>

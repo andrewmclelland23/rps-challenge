@@ -20,6 +20,11 @@ class MarketingGames < Sinatra::Base
     erb(:games)
   end
 
+  get '/games/rock_paper_scissors_player_select' do
+    @user_mgmt = UserManagement.instance
+    erb(:rock_paper_scissors_player_select)
+  end
+
   get '/games/rock_paper_scissors' do
     @user = UserManagement.instance.users[-1]
     erb(:rock_paper_scissors)

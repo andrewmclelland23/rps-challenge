@@ -28,4 +28,9 @@ class UserManagement
     user_names_array = @users.map { |user| user.name}
     HTMLBuilder.array_to_list(user_names_array)
   end
+
+  def print_user_drop_down_html
+    user_array = @users.map { |user| {value: user, visible_name: user.name} }
+    HTMLBuilder.array_to_drop_down(user_array)
+  end
 end
